@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Smooch Sans', sans-serif; /* Using the Smooch Sans font */
+}
+
+body {
+  background-color: #252525; /* Lighter background for better contrast */
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+/* Navbar Styles */
+header {
+  background-color: #333; /* Dark background for the navbar */
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1.8rem;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #FF6F61; /* Use accent color for hover */
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.9rem;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  background-color: #FF6F61; /* Accent color for CTA button */
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.9rem;
+  box-shadow: #313131;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #E64A3A; /* Darker shade on hover */
+}
+
+/* Portfolio Section */
+.portfolio {
+  background: linear-gradient(180deg, #252525 0%, #d6d6d6 100%); /* Soft gradient background */
+  padding: 80px 20px; /* Increased padding for a more spacious feel */
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 42px; /* Larger font size for the title */
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #f3f3f3;
+  letter-spacing: 1px;
+}
+
+.portfolio p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.portfolio-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  flex: 0 0 25%;
+  max-width: 300px;
+  background-color: #fff; /* White background for each portfolio item */
+  border-radius: 10px; /* Rounded corners for card effect */
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for card effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  text-align: center;
+  
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out ; /* Smooth zoom effect on image */
+  
+}
+
+.portfolio-item p {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase title for emphasis */
+  letter-spacing: 1px;
+}
+
+/* Hover Effects for Portfolio Items */
+.portfolio-item:hover {
+  transform: translateY(-10px); /* Lift the card when hovered */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow for hover effect */
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1); /* Zoom effect on image */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .portfolio-item {
+    flex: 0 0 45%; /* Two items per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-item {
+    flex: 0 0 90%; /* Single item per row on small screens */
+  }
+}
+
+/* About Section */
+.about {
+  background-color: #313131;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #cf7676;
+  font-weight: bold;
+}
+
+.about p {
+  font-size: 1.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ecebeb;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about p:first-of-type {
+  font-weight: bold;
+}
+
+.about p:last-of-type { 
+  color: #ffffff;
+}
+
+.about img {
+  max-width: 200px;
+  border-radius: 50%;
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+.about img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #d6d6d6;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.contact p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.contact .cta-button {
+  background-color: #FF6F61;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.contact .cta-button:hover {
+  background-color: #E64A3A;
+}
+
+.contact .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.contact .social-links a {
+  font-size: 18px;
+  color: #333;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.contact .social-links a:hover {
+  color: #FF6F61;
+}
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Smooch Sans', sans-serif; /* Using the Smooch Sans font */
+}
+
+body {
+  background-color: #252525; /* Lighter background for better contrast */
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+/* Navbar Styles */
+header {
+  background-color: #333; /* Dark background for the navbar */
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1.5rem;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #FF6F61; /* Use accent color for hover */
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 2.1rem;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  background-color: #FF6F61; /* Accent color for CTA button */
+  color: white;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #E64A3A; /* Darker shade on hover */
+}
+
+/* Portfolio Section */
+.portfolio {
+  background: linear-gradient(180deg, #252525 0%, #d6d6d6 100%); /* Soft gradient background */
+  padding: 80px 20px; /* Increased padding for a more spacious feel */
+  text-align: center;
+  margin-top: 40px;
+}
+
+.portfolio h2 {
+  font-size: 42px; /* Larger font size for the title */
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #f3f3f3;
+  letter-spacing: 1px;
+}
+
+.portfolio p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.portfolio-grid {
+  display: flex;
+  gap: 20px; /* Reduced gap for better spacing */
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.portfolio-item {
+  position: relative;
+  flex: 0 0 48%; /* Adjust to 48% width for 2 items per row */
+  max-width: 500px; /* Limiting max width */
+  background-color: #fff; /* White background for each portfolio item */
+  border-radius: 10px; /* Rounded corners for card effect */
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for card effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  text-align: center;
+  margin-bottom: 30px; /* Add space between items */
+}
+
+.portfolio-item img {
+  width: 100%; /* Ensure images fit the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images cover the container without distortion */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom effect on image */
+}
+
+.portfolio-item p {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase title for emphasis */
+  letter-spacing: 1px;
+}
+
+/* Add overlay effect for thumbnails */
+.portfolio-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.portfolio-item:hover::before {
+  opacity: 1; /* Show the overlay on hover */
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px); /* Lift the card when hovered */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow for hover effect */
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05); /* Slight zoom effect on image */
+}
+
+.portfolio-item:hover p {
+  color: #FF6F61; /* Change text color on hover */
+  font-size: 20px; /* Slightly larger text */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .portfolio-item {
+    flex: 0 0 48%; /* 2 items per row on large screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-item {
+    flex: 0 0 45%; /* 2 items per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-item {
+    flex: 0 0 90%; /* Single item per row on small screens */
+  }
+}
+
+/* Contact Section */
+.contact {
+  background-color: #d6d6d6;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.contact p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.contact .cta-button {
+  background-color: #FF6F61;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.contact .cta-button:hover {
+  background-color: #E64A3A;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 16px;
+  margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Smooch Sans', sans-serif; /* Using the Smooch Sans font */
+}
+
+body {
+  background-color: #252525; /* Lighter background for better contrast */
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+/* Navbar Styles */
+header {
+  background-color: #333; /* Dark background for the navbar */
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1.5rem;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #FF6F61; /* Accent color for hover */
+  border-radius: 5px;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #d6d6d6;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.contact p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline-color: #FF6F61;
+  border-color: #FF6F61;
+}
+
+.contact-form button {
+  background-color: #FF6F61;
+  color: white;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #E64A3A;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 16px;
+  margin: 0;
+}

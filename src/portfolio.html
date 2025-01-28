@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Video Editing Portfolio</h1>
+        <p>Showcasing My Best Video Edits</p>
+    </header>
+      <!-- Navbar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <!--<li><a href="portfolio.html">Portfolio</a></li>-->
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="portfolio-container">
+        <div class="video-slot" onclick="openVideoModal('video1')">
+            <img src="D:\Editing\programming\JavaScript\Projects\portfolio\saber.jpg" alt="Video 1">
+            <p>Video Title 1</p>
+        </div>
+        <div class="video-slot" onclick="openVideoModal('video2')">
+            <img src="D:\Editing\programming\JavaScript\Projects\portfolio\broly.jpg" alt="Video 2">
+            <p>Video Title 2</p>
+        </div>
+        <div class="video-slot" onclick="openVideoModal('video3')">
+            <img src="D:\Editing\programming\JavaScript\Projects\portfolio\gogeta.jpg" alt="Video 3">
+            <p>Video Title 3</p>
+        </div>
+        <div class="video-slot" onclick="openVideoModal('video4')">
+            <img src="D:\Editing\programming\JavaScript\Projects\portfolio\gojo.jpg" alt="Video 4">
+            <p>Video Title 4</p>
+        </div>
+        <div class="video-slot" onclick="openVideoModal('video5')">
+            <img src="D:\Editing\programming\JavaScript\Projects\portfolio\sekiro.jpg" alt="Video 5">
+            <p>Video Title 5</p>
+        </div>
+        <div class="video-slot" onclick="openVideoModal('video6')">
+            <img src="D:\Editing\programming\JavaScript\Projects\portfolio\asta.jpg" alt="Video 6">
+            <p>Video Title 6</p>
+        </div>
+        <div class="video-slot" onclick="openVideoModal('video7')">
+            <img src="D:\Editing\programming\JavaScript\Projects\portfolio\lost.jpg" alt="Video 7">
+            <p>Video Title 7</p>
+        </div>
+        <div class="video-slot" onclick="openVideoModal('video8')">
+            <img src="D:\Editing\programming\JavaScript\Projects\portfolio\vyke.jpg" alt="Video 8">
+            <p>Video Title 8</p>
+        </div>
+    </div>
+
+    <!-- Modal to play video -->
+    <div id="video-modal" class="video-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeVideoModal()">×</span>
+            <video id="video-player" controls>
+                <source id="video-source" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
